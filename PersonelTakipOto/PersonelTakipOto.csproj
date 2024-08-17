@@ -70,6 +70,18 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPozisyonBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPozisyonBilgileri.Designer.cs">
+      <DependentUpon>FrmPozisyonBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPozisyonListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPozisyonListesi.Designer.cs">
+      <DependentUpon>FrmPozisyonListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -83,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPozisyonBilgileri.resx">
+      <DependentUpon>FrmPozisyonBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPozisyonListesi.resx">
+      <DependentUpon>FrmPozisyonListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
