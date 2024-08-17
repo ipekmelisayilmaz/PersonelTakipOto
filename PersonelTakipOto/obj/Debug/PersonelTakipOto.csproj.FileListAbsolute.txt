@@ -1,0 +1,16 @@
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\PersonelTakipOto.exe.config
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\PersonelTakipOto.exe
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\PersonelTakipOto.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\BLL.dll
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\DAL.dll
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\BLL.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\DAL.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmLogin.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.Properties.Resources.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.CopyComplete
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.exe
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.pdb
