@@ -52,6 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDepartmanBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartmanBilgileri.Designer.cs">
+      <DependentUpon>FrmDepartmanBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartmanListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartmanListesi.Designer.cs">
+      <DependentUpon>FrmDepartmanListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartmanBilgileri.resx">
+      <DependentUpon>FrmDepartmanBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartmanListesi.resx">
+      <DependentUpon>FrmDepartmanListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
