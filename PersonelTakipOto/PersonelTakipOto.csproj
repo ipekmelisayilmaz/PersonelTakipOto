@@ -88,6 +88,18 @@
     <Compile Include="FrmIzinListesi.Designer.cs">
       <DependentUpon>FrmIzinListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMaasBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaasBilgileri.Designer.cs">
+      <DependentUpon>FrmMaasBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaasListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaasListesi.Designer.cs">
+      <DependentUpon>FrmMaasListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIzinListesi.resx">
       <DependentUpon>FrmIzinListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaasBilgileri.resx">
+      <DependentUpon>FrmMaasBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaasListesi.resx">
+      <DependentUpon>FrmMaasListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
