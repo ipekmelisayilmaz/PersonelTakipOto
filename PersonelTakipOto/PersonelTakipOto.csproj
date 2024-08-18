@@ -70,6 +70,18 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPersonelBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelBilgileri.Designer.cs">
+      <DependentUpon>FrmPersonelBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonelListesi.Designer.cs">
+      <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPozisyonBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelBilgileri.resx">
+      <DependentUpon>FrmPersonelBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonelListesi.resx">
+      <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPozisyonBilgileri.resx">
       <DependentUpon>FrmPozisyonBilgileri.cs</DependentUpon>

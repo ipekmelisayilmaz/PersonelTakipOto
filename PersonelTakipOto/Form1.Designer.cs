@@ -45,6 +45,7 @@
             this.label1.Size = new System.Drawing.Size(90, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "User No";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtUserNo
             // 
@@ -53,6 +54,7 @@
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(119, 30);
             this.txtUserNo.TabIndex = 0;
+            this.txtUserNo.TextChanged += new System.EventHandler(this.txtUserNo_TextChanged);
             this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
             // 
             // txtPassword
