@@ -84,6 +84,7 @@
             this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // btnKapat
             // 

@@ -32,5 +32,22 @@ namespace PersonelTakipOto
                 e.Handled = true;
             }
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            FrmIzinBilgileri frm = new FrmIzinBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmIzinBilgileri frm = new FrmIzinBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+
+        }
     }
 }

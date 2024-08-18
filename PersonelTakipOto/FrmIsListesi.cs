@@ -44,5 +44,22 @@ namespace PersonelTakipOto
         {
             
         }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            FrmIsBilgileri frm = new FrmIsBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            FrmIsBilgileri frm = new FrmIsBilgileri();
+            this.Hide();
+            frm.ShowDialog();
+            this.Visible = true;
+
+        }
     }
 }

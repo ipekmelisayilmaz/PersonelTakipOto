@@ -22,3 +22,8 @@ C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelT
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPersonelListesi.resources
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPozisyonBilgileri.resources
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPozisyonListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmIsBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmIzinBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmIzinListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmMaasBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmMaasListesi.resources

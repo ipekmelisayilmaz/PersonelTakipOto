@@ -64,6 +64,7 @@
             this.btnLogOut.Text = "Oturumu Kapat";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnPozisyon
             // 
@@ -78,6 +79,7 @@
             this.btnPozisyon.Text = "Pozisyon İşlemleri";
             this.btnPozisyon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPozisyon.UseVisualStyleBackColor = false;
+            this.btnPozisyon.Click += new System.EventHandler(this.btnPozisyon_Click);
             // 
             // btnDepartman
             // 
@@ -92,6 +94,7 @@
             this.btnDepartman.Text = "Departman İşlemleri";
             this.btnDepartman.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDepartman.UseVisualStyleBackColor = false;
+            this.btnDepartman.Click += new System.EventHandler(this.btnDepartman_Click);
             // 
             // btnIzin
             // 
@@ -106,6 +109,7 @@
             this.btnIzin.Text = "İzin İşlemleri";
             this.btnIzin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnIzin.UseVisualStyleBackColor = false;
+            this.btnIzin.Click += new System.EventHandler(this.btnIzin_Click);
             // 
             // btnMaas
             // 
@@ -120,6 +124,7 @@
             this.btnMaas.Text = "Maaş";
             this.btnMaas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMaas.UseVisualStyleBackColor = false;
+            this.btnMaas.Click += new System.EventHandler(this.btnMaas_Click);
             // 
             // btnIs
             // 
@@ -134,6 +139,7 @@
             this.btnIs.Text = "İşler";
             this.btnIs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnIs.UseVisualStyleBackColor = false;
+            this.btnIs.Click += new System.EventHandler(this.btnIs_Click);
             // 
             // btnPersonel
             // 
@@ -148,6 +154,7 @@
             this.btnPersonel.Text = "Personel İşlemleri";
             this.btnPersonel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnPersonel.UseVisualStyleBackColor = false;
+            this.btnPersonel.Click += new System.EventHandler(this.btnPersonel_Click);
             // 
             // FrmMain
             // 
@@ -165,6 +172,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Takip";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
 

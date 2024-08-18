@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnKapat = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnEkle = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnAra = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbKucuk = new System.Windows.Forms.RadioButton();
+            this.rbEsit = new System.Windows.Forms.RadioButton();
+            this.rbBuyuk = new System.Windows.Forms.RadioButton();
+            this.cmbAylar = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtYil = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMaas = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.cmbPozisyon = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbDepartman = new System.Windows.Forms.ComboBox();
@@ -47,24 +53,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbAylar = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtYil = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtMaas = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbBuyuk = new System.Windows.Forms.RadioButton();
-            this.rbEsit = new System.Windows.Forms.RadioButton();
-            this.rbKucuk = new System.Windows.Forms.RadioButton();
-            this.btnTemizle = new System.Windows.Forms.Button();
-            this.btnAra = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnKapat = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,70 +77,142 @@
             this.panel1.Size = new System.Drawing.Size(1115, 258);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.btnKapat);
-            this.panel2.Controls.Add(this.btnSil);
-            this.panel2.Controls.Add(this.btnGuncelle);
-            this.panel2.Controls.Add(this.btnEkle);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 588);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1115, 100);
-            this.panel2.TabIndex = 0;
+            this.panel4.Controls.Add(this.btnTemizle);
+            this.panel4.Controls.Add(this.btnAra);
+            this.panel4.Controls.Add(this.groupBox1);
+            this.panel4.Controls.Add(this.cmbAylar);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.txtYil);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.txtMaas);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(482, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(633, 258);
+            this.panel4.TabIndex = 1;
             // 
-            // dataGridView1
+            // btnTemizle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 258);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1115, 330);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Location = new System.Drawing.Point(320, 196);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(136, 43);
+            this.btnTemizle.TabIndex = 4;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
             // 
-            // btnKapat
+            // btnAra
             // 
-            this.btnKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKapat.Location = new System.Drawing.Point(727, 29);
-            this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(128, 43);
-            this.btnKapat.TabIndex = 3;
-            this.btnKapat.Text = "Kapat";
-            this.btnKapat.UseVisualStyleBackColor = true;
-            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.Location = new System.Drawing.Point(155, 196);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(136, 43);
+            this.btnAra.TabIndex = 3;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
             // 
-            // btnSil
+            // groupBox1
             // 
-            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(559, 29);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(132, 43);
-            this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.rbKucuk);
+            this.groupBox1.Controls.Add(this.rbEsit);
+            this.groupBox1.Controls.Add(this.rbBuyuk);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.Location = new System.Drawing.Point(320, 29);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(287, 77);
+            this.groupBox1.TabIndex = 39;
+            this.groupBox1.TabStop = false;
             // 
-            // btnGuncelle
+            // rbKucuk
             // 
-            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(382, 29);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(127, 43);
-            this.btnGuncelle.TabIndex = 1;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.rbKucuk.AutoSize = true;
+            this.rbKucuk.Location = new System.Drawing.Point(97, 25);
+            this.rbKucuk.Name = "rbKucuk";
+            this.rbKucuk.Size = new System.Drawing.Size(81, 24);
+            this.rbKucuk.TabIndex = 1;
+            this.rbKucuk.TabStop = true;
+            this.rbKucuk.Text = "Küçük";
+            this.rbKucuk.UseVisualStyleBackColor = true;
             // 
-            // btnEkle
+            // rbEsit
             // 
-            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(199, 29);
-            this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(136, 43);
-            this.btnEkle.TabIndex = 0;
-            this.btnEkle.Text = "Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
+            this.rbEsit.AutoSize = true;
+            this.rbEsit.Location = new System.Drawing.Point(197, 25);
+            this.rbEsit.Name = "rbEsit";
+            this.rbEsit.Size = new System.Drawing.Size(63, 24);
+            this.rbEsit.TabIndex = 2;
+            this.rbEsit.TabStop = true;
+            this.rbEsit.Text = "Eşit";
+            this.rbEsit.UseVisualStyleBackColor = true;
+            // 
+            // rbBuyuk
+            // 
+            this.rbBuyuk.AutoSize = true;
+            this.rbBuyuk.Location = new System.Drawing.Point(10, 25);
+            this.rbBuyuk.Name = "rbBuyuk";
+            this.rbBuyuk.Size = new System.Drawing.Size(81, 24);
+            this.rbBuyuk.TabIndex = 0;
+            this.rbBuyuk.TabStop = true;
+            this.rbBuyuk.Text = "Büyük";
+            this.rbBuyuk.UseVisualStyleBackColor = true;
+            // 
+            // cmbAylar
+            // 
+            this.cmbAylar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAylar.FormattingEnabled = true;
+            this.cmbAylar.Location = new System.Drawing.Point(120, 58);
+            this.cmbAylar.Name = "cmbAylar";
+            this.cmbAylar.Size = new System.Drawing.Size(174, 33);
+            this.cmbAylar.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(15, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 25);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Maaş Ay";
+            // 
+            // txtYil
+            // 
+            this.txtYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtYil.Location = new System.Drawing.Point(120, 9);
+            this.txtYil.Name = "txtYil";
+            this.txtYil.Size = new System.Drawing.Size(172, 30);
+            this.txtYil.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(12, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 25);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Maaş Yıl";
+            // 
+            // txtMaas
+            // 
+            this.txtMaas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMaas.Location = new System.Drawing.Point(122, 103);
+            this.txtMaas.Name = "txtMaas";
+            this.txtMaas.Size = new System.Drawing.Size(172, 30);
+            this.txtMaas.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(14, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 25);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Maaş";
             // 
             // panel3
             // 
@@ -159,23 +231,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(482, 258);
             this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btnTemizle);
-            this.panel4.Controls.Add(this.btnAra);
-            this.panel4.Controls.Add(this.groupBox1);
-            this.panel4.Controls.Add(this.cmbAylar);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.txtYil);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.txtMaas);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(482, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(633, 258);
-            this.panel4.TabIndex = 1;
             // 
             // cmbPozisyon
             // 
@@ -269,125 +324,72 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "User No";
             // 
-            // cmbAylar
+            // panel2
             // 
-            this.cmbAylar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cmbAylar.FormattingEnabled = true;
-            this.cmbAylar.Location = new System.Drawing.Point(120, 58);
-            this.cmbAylar.Name = "cmbAylar";
-            this.cmbAylar.Size = new System.Drawing.Size(174, 33);
-            this.cmbAylar.TabIndex = 1;
+            this.panel2.Controls.Add(this.btnKapat);
+            this.panel2.Controls.Add(this.btnSil);
+            this.panel2.Controls.Add(this.btnGuncelle);
+            this.panel2.Controls.Add(this.btnEkle);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 588);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1115, 100);
+            this.panel2.TabIndex = 0;
             // 
-            // label8
+            // btnKapat
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(15, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 25);
-            this.label8.TabIndex = 38;
-            this.label8.Text = "Maaş Ay";
+            this.btnKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKapat.Location = new System.Drawing.Point(727, 29);
+            this.btnKapat.Name = "btnKapat";
+            this.btnKapat.Size = new System.Drawing.Size(128, 43);
+            this.btnKapat.TabIndex = 3;
+            this.btnKapat.Text = "Kapat";
+            this.btnKapat.UseVisualStyleBackColor = true;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
-            // txtYil
+            // btnSil
             // 
-            this.txtYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYil.Location = new System.Drawing.Point(120, 9);
-            this.txtYil.Name = "txtYil";
-            this.txtYil.Size = new System.Drawing.Size(172, 30);
-            this.txtYil.TabIndex = 0;
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Location = new System.Drawing.Point(559, 29);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(132, 43);
+            this.btnSil.TabIndex = 2;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // btnGuncelle
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(12, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 25);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Maaş Yıl";
+            this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGuncelle.Location = new System.Drawing.Point(382, 29);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(127, 43);
+            this.btnGuncelle.TabIndex = 1;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
-            // txtMaas
+            // btnEkle
             // 
-            this.txtMaas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtMaas.Location = new System.Drawing.Point(122, 103);
-            this.txtMaas.Name = "txtMaas";
-            this.txtMaas.Size = new System.Drawing.Size(172, 30);
-            this.txtMaas.TabIndex = 2;
+            this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkle.Location = new System.Drawing.Point(199, 29);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(136, 43);
+            this.btnEkle.TabIndex = 0;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // label6
+            // dataGridView1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(14, 108);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 25);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Maaş";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rbKucuk);
-            this.groupBox1.Controls.Add(this.rbEsit);
-            this.groupBox1.Controls.Add(this.rbBuyuk);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(320, 29);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 77);
-            this.groupBox1.TabIndex = 39;
-            this.groupBox1.TabStop = false;
-            // 
-            // rbBuyuk
-            // 
-            this.rbBuyuk.AutoSize = true;
-            this.rbBuyuk.Location = new System.Drawing.Point(10, 25);
-            this.rbBuyuk.Name = "rbBuyuk";
-            this.rbBuyuk.Size = new System.Drawing.Size(81, 24);
-            this.rbBuyuk.TabIndex = 0;
-            this.rbBuyuk.TabStop = true;
-            this.rbBuyuk.Text = "Büyük";
-            this.rbBuyuk.UseVisualStyleBackColor = true;
-            // 
-            // rbEsit
-            // 
-            this.rbEsit.AutoSize = true;
-            this.rbEsit.Location = new System.Drawing.Point(197, 25);
-            this.rbEsit.Name = "rbEsit";
-            this.rbEsit.Size = new System.Drawing.Size(63, 24);
-            this.rbEsit.TabIndex = 2;
-            this.rbEsit.TabStop = true;
-            this.rbEsit.Text = "Eşit";
-            this.rbEsit.UseVisualStyleBackColor = true;
-            // 
-            // rbKucuk
-            // 
-            this.rbKucuk.AutoSize = true;
-            this.rbKucuk.Location = new System.Drawing.Point(97, 25);
-            this.rbKucuk.Name = "rbKucuk";
-            this.rbKucuk.Size = new System.Drawing.Size(81, 24);
-            this.rbKucuk.TabIndex = 1;
-            this.rbKucuk.TabStop = true;
-            this.rbKucuk.Text = "Küçük";
-            this.rbKucuk.UseVisualStyleBackColor = true;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(320, 196);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(136, 43);
-            this.btnTemizle.TabIndex = 4;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
-            // 
-            // btnAra
-            // 
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAra.Location = new System.Drawing.Point(155, 196);
-            this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(136, 43);
-            this.btnAra.TabIndex = 3;
-            this.btnAra.Text = "Ara";
-            this.btnAra.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 258);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1115, 330);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FrmMaasListesi
             // 
@@ -401,14 +403,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maaş Listesi";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
