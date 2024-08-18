@@ -76,6 +76,18 @@
     <Compile Include="FrmIsListesi.Designer.cs">
       <DependentUpon>FrmIsListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIzinBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinBilgileri.Designer.cs">
+      <DependentUpon>FrmIzinBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzinListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzinListesi.Designer.cs">
+      <DependentUpon>FrmIzinListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIsListesi.resx">
       <DependentUpon>FrmIsListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinBilgileri.resx">
+      <DependentUpon>FrmIzinBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzinListesi.resx">
+      <DependentUpon>FrmIzinListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
