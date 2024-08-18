@@ -27,3 +27,4 @@ C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelT
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmIzinListesi.resources
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmMaasBilgileri.resources
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmMaasListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\bin\Debug\DAL.dll.config

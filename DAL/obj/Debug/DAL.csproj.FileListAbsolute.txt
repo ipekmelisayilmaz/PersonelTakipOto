@@ -4,3 +4,4 @@ C:\Users\DELL\source\repos\PersonelTakipOto\DAL\obj\Debug\DAL.csproj.AssemblyRef
 C:\Users\DELL\source\repos\PersonelTakipOto\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\PersonelTakipOto\DAL\obj\Debug\DAL.dll
 C:\Users\DELL\source\repos\PersonelTakipOto\DAL\obj\Debug\DAL.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\DAL\bin\Debug\DAL.dll.config

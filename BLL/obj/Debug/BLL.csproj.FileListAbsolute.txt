@@ -7,3 +7,4 @@ C:\Users\DELL\source\repos\PersonelTakipOto\BLL\obj\Debug\BLL.csproj.CoreCompile
 C:\Users\DELL\source\repos\PersonelTakipOto\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\DELL\source\repos\PersonelTakipOto\BLL\obj\Debug\BLL.dll
 C:\Users\DELL\source\repos\PersonelTakipOto\BLL\obj\Debug\BLL.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\BLL\bin\Debug\DAL.dll.config

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace PersonelTakipOto
 {
@@ -28,6 +30,8 @@ namespace PersonelTakipOto
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            liste = DepartmanBLL.DepartmanGetir();
+            dataGridView1.DataSource = liste;
 
         }
 
@@ -37,6 +41,16 @@ namespace PersonelTakipOto
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+
+        }
+        List<DEPARTMAN> liste = new List<DEPARTMAN>();
+        private void FrmDepartmanListesi_Load(object sender, EventArgs e)
+        {
+           
+            liste = DepartmanBLL.DepartmanGetir();
+            dataGridView1.DataSource = liste;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Departman Adı";
 
         }
     }
