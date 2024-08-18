@@ -16,7 +16,7 @@ namespace PersonelTakipOto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmIsListesi());
         }
     }
 }

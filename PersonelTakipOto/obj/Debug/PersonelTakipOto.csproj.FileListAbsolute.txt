@@ -14,3 +14,11 @@ C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelT
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.CopyComplete
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.exe
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmDepartmanBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmDepartmanListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmIsListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmMain.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPersonelBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPersonelListesi.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPozisyonBilgileri.resources
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.FrmPozisyonListesi.resources

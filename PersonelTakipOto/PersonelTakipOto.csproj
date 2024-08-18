@@ -64,6 +64,18 @@
     <Compile Include="FrmDepartmanListesi.Designer.cs">
       <DependentUpon>FrmDepartmanListesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIsBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIsBilgileri.Designer.cs">
+      <DependentUpon>FrmIsBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIsListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIsListesi.Designer.cs">
+      <DependentUpon>FrmIsListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDepartmanListesi.resx">
       <DependentUpon>FrmDepartmanListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIsBilgileri.resx">
+      <DependentUpon>FrmIsBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIsListesi.resx">
+      <DependentUpon>FrmIsListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
