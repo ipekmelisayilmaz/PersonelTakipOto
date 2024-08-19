@@ -109,6 +109,7 @@
             this.Name = "FrmPozisyonBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pozisyon Bilgileri";
+            this.Load += new System.EventHandler(this.FrmPozisyonBilgileri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
