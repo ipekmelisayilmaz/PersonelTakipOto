@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtUserNo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnControl = new System.Windows.Forms.Button();
+            this.chisAdmin = new System.Windows.Forms.CheckBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.chisAdmin = new System.Windows.Forms.CheckBox();
+            this.btnControl = new System.Windows.Forms.Button();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAdress = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
@@ -74,34 +74,16 @@
             this.panel1.Size = new System.Drawing.Size(945, 81);
             this.panel1.TabIndex = 0;
             // 
-            // txtUserNo
+            // chisAdmin
             // 
-            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUserNo.Location = new System.Drawing.Point(98, 14);
-            this.txtUserNo.Name = "txtUserNo";
-            this.txtUserNo.Size = new System.Drawing.Size(144, 30);
-            this.txtUserNo.TabIndex = 0;
-            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(2, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "User No";
-            // 
-            // btnControl
-            // 
-            this.btnControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnControl.Location = new System.Drawing.Point(271, 12);
-            this.btnControl.Name = "btnControl";
-            this.btnControl.Size = new System.Drawing.Size(141, 38);
-            this.btnControl.TabIndex = 1;
-            this.btnControl.Text = "Control";
-            this.btnControl.UseVisualStyleBackColor = true;
+            this.chisAdmin.AutoSize = true;
+            this.chisAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.chisAdmin.Location = new System.Drawing.Point(774, 18);
+            this.chisAdmin.Name = "chisAdmin";
+            this.chisAdmin.Size = new System.Drawing.Size(95, 29);
+            this.chisAdmin.TabIndex = 8;
+            this.chisAdmin.Text = "Admin";
+            this.chisAdmin.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
@@ -121,16 +103,35 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Şifre";
             // 
-            // chisAdmin
+            // btnControl
             // 
-            this.chisAdmin.AutoSize = true;
-            this.chisAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.chisAdmin.Location = new System.Drawing.Point(774, 18);
-            this.chisAdmin.Name = "chisAdmin";
-            this.chisAdmin.Size = new System.Drawing.Size(95, 29);
-            this.chisAdmin.TabIndex = 8;
-            this.chisAdmin.Text = "Admin";
-            this.chisAdmin.UseVisualStyleBackColor = true;
+            this.btnControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnControl.Location = new System.Drawing.Point(271, 12);
+            this.btnControl.Name = "btnControl";
+            this.btnControl.Size = new System.Drawing.Size(141, 38);
+            this.btnControl.TabIndex = 1;
+            this.btnControl.Text = "Kontrol";
+            this.btnControl.UseVisualStyleBackColor = true;
+            this.btnControl.Click += new System.EventHandler(this.btnControl_Click);
+            // 
+            // txtUserNo
+            // 
+            this.txtUserNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUserNo.Location = new System.Drawing.Point(98, 14);
+            this.txtUserNo.Name = "txtUserNo";
+            this.txtUserNo.Size = new System.Drawing.Size(144, 30);
+            this.txtUserNo.TabIndex = 0;
+            this.txtUserNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserNo_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(2, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "User No";
             // 
             // txtSoyad
             // 
@@ -208,6 +209,7 @@
             this.btnSec.TabIndex = 4;
             this.btnSec.Text = "Seç";
             this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
             // txtMaas
             // 
@@ -255,6 +257,7 @@
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(144, 33);
             this.cmbDepartman.TabIndex = 6;
+            this.cmbDepartman.SelectedIndexChanged += new System.EventHandler(this.cmbDepartman_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -283,14 +286,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(144, 22);
             this.dateTimePicker1.TabIndex = 8;
             // 
-            // textBox1
+            // txtAdress
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(193, 499);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 106);
-            this.textBox1.TabIndex = 9;
+            this.txtAdress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAdress.Location = new System.Drawing.Point(193, 499);
+            this.txtAdress.Multiline = true;
+            this.txtAdress.Name = "txtAdress";
+            this.txtAdress.Size = new System.Drawing.Size(380, 106);
+            this.txtAdress.TabIndex = 9;
+            this.txtAdress.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label10
             // 
@@ -322,6 +326,7 @@
             this.btnKaydet.TabIndex = 10;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FrmPersonelBilgileri
             // 
@@ -330,7 +335,7 @@
             this.ClientSize = new System.Drawing.Size(945, 721);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAdress);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label9);
@@ -352,6 +357,7 @@
             this.Name = "FrmPersonelBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personel Bilgileri";
+            this.Load += new System.EventHandler(this.FrmPersonelBilgileri_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -386,7 +392,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAdress;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Button btnKaydet;
