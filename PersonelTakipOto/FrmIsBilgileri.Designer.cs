@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cmbPozisyon = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbDepartman = new System.Windows.Forms.ComboBox();
@@ -45,13 +45,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtBaslik = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIcerik = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,6 +64,19 @@
             this.panel1.Size = new System.Drawing.Size(318, 728);
             this.panel1.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 209);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(318, 519);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.cmbPozisyon);
@@ -75,17 +88,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(318, 209);
             this.panel2.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 209);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(318, 519);
-            this.dataGridView1.TabIndex = 1;
             // 
             // cmbPozisyon
             // 
@@ -114,6 +116,7 @@
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(212, 33);
             this.cmbDepartman.TabIndex = 0;
+            this.cmbDepartman.SelectedIndexChanged += new System.EventHandler(this.cmbDepartman_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -220,14 +223,14 @@
             this.label6.TabIndex = 32;
             this.label6.Text = "Başlık";
             // 
-            // textBox1
+            // txtIcerik
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(170, 304);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 188);
-            this.textBox1.TabIndex = 2;
+            this.txtIcerik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtIcerik.Location = new System.Drawing.Point(170, 304);
+            this.txtIcerik.Multiline = true;
+            this.txtIcerik.Name = "txtIcerik";
+            this.txtIcerik.Size = new System.Drawing.Size(377, 188);
+            this.txtIcerik.TabIndex = 2;
             // 
             // label7
             // 
@@ -259,6 +262,7 @@
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FrmIsBilgileri
             // 
@@ -267,7 +271,7 @@
             this.ClientSize = new System.Drawing.Size(921, 728);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIcerik);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtBaslik);
             this.Controls.Add(this.label6);
@@ -283,10 +287,11 @@
             this.Name = "FrmIsBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İş Bilgileri";
+            this.Load += new System.EventHandler(this.FrmIsBilgileri_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +316,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBaslik;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIcerik;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Button btnKaydet;
