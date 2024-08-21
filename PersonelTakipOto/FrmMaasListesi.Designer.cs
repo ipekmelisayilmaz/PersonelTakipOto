@@ -93,6 +93,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(633, 258);
             this.panel4.TabIndex = 1;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnTemizle
             // 
@@ -103,6 +104,7 @@
             this.btnTemizle.TabIndex = 4;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnAra
             // 
@@ -113,6 +115,7 @@
             this.btnAra.TabIndex = 3;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // groupBox1
             // 
@@ -185,6 +188,7 @@
             this.txtYil.Name = "txtYil";
             this.txtYil.Size = new System.Drawing.Size(172, 30);
             this.txtYil.TabIndex = 0;
+            this.txtYil.TextChanged += new System.EventHandler(this.txtYil_TextChanged);
             // 
             // label7
             // 
@@ -259,6 +263,7 @@
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(212, 33);
             this.cmbDepartman.TabIndex = 3;
+            this.cmbDepartman.SelectedIndexChanged += new System.EventHandler(this.cmbDepartman_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -402,6 +407,7 @@
             this.Name = "FrmMaasListesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maaş Listesi";
+            this.Load += new System.EventHandler(this.FrmMaasListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

@@ -54,6 +54,9 @@ namespace DAL
     partial void InsertPOZISYON(POZISYON instance);
     partial void UpdatePOZISYON(POZISYON instance);
     partial void DeletePOZISYON(POZISYON instance);
+    partial void InsertMAA(MAA instance);
+    partial void UpdateMAA(MAA instance);
+    partial void DeleteMAA(MAA instance);
     #endregion
 		
 		public PersonelDataClassesDataContext() : 
@@ -134,14 +137,6 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<MAA> MAAs
-		{
-			get
-			{
-				return this.GetTable<MAA>();
-			}
-		}
-		
 		public System.Data.Linq.Table<PERSONEL> PERSONELs
 		{
 			get
@@ -155,6 +150,14 @@ namespace DAL
 			get
 			{
 				return this.GetTable<POZISYON>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MAA> MAAs
+		{
+			get
+			{
+				return this.GetTable<MAA>();
 			}
 		}
 	}
@@ -915,105 +918,6 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MAAS")]
-	public partial class MAA
-	{
-		
-		private int _ID;
-		
-		private int _PersonelID;
-		
-		private int _Miktar;
-		
-		private int _YIL;
-		
-		private int _Ay_ID;
-		
-		public MAA()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonelID", DbType="Int NOT NULL")]
-		public int PersonelID
-		{
-			get
-			{
-				return this._PersonelID;
-			}
-			set
-			{
-				if ((this._PersonelID != value))
-				{
-					this._PersonelID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Miktar", DbType="Int NOT NULL")]
-		public int Miktar
-		{
-			get
-			{
-				return this._Miktar;
-			}
-			set
-			{
-				if ((this._Miktar != value))
-				{
-					this._Miktar = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YIL", DbType="Int NOT NULL")]
-		public int YIL
-		{
-			get
-			{
-				return this._YIL;
-			}
-			set
-			{
-				if ((this._YIL != value))
-				{
-					this._YIL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ay_ID", DbType="Int NOT NULL")]
-		public int Ay_ID
-		{
-			get
-			{
-				return this._Ay_ID;
-			}
-			set
-			{
-				if ((this._Ay_ID != value))
-				{
-					this._Ay_ID = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PERSONEL")]
 	public partial class PERSONEL : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1425,6 +1329,164 @@ namespace DAL
 					this._DepartmanID = value;
 					this.SendPropertyChanged("DepartmanID");
 					this.OnDepartmanIDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.MAAS")]
+	public partial class MAA : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private int _PersonelID;
+		
+		private int _Miktar;
+		
+		private int _YIL;
+		
+		private int _Ay_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnPersonelIDChanging(int value);
+    partial void OnPersonelIDChanged();
+    partial void OnMiktarChanging(int value);
+    partial void OnMiktarChanged();
+    partial void OnYILChanging(int value);
+    partial void OnYILChanged();
+    partial void OnAy_IDChanging(int value);
+    partial void OnAy_IDChanged();
+    #endregion
+		
+		public MAA()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PersonelID", DbType="Int NOT NULL")]
+		public int PersonelID
+		{
+			get
+			{
+				return this._PersonelID;
+			}
+			set
+			{
+				if ((this._PersonelID != value))
+				{
+					this.OnPersonelIDChanging(value);
+					this.SendPropertyChanging();
+					this._PersonelID = value;
+					this.SendPropertyChanged("PersonelID");
+					this.OnPersonelIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Miktar", DbType="Int NOT NULL")]
+		public int Miktar
+		{
+			get
+			{
+				return this._Miktar;
+			}
+			set
+			{
+				if ((this._Miktar != value))
+				{
+					this.OnMiktarChanging(value);
+					this.SendPropertyChanging();
+					this._Miktar = value;
+					this.SendPropertyChanged("Miktar");
+					this.OnMiktarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_YIL", DbType="Int NOT NULL")]
+		public int YIL
+		{
+			get
+			{
+				return this._YIL;
+			}
+			set
+			{
+				if ((this._YIL != value))
+				{
+					this.OnYILChanging(value);
+					this.SendPropertyChanging();
+					this._YIL = value;
+					this.SendPropertyChanged("YIL");
+					this.OnYILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ay_ID", DbType="Int NOT NULL")]
+		public int Ay_ID
+		{
+			get
+			{
+				return this._Ay_ID;
+			}
+			set
+			{
+				if ((this._Ay_ID != value))
+				{
+					this.OnAy_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Ay_ID = value;
+					this.SendPropertyChanged("Ay_ID");
+					this.OnAy_IDChanged();
 				}
 			}
 		}
