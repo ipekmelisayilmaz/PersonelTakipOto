@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
+using DAL.DTO;
 
 namespace PersonelTakipOto
 {
@@ -47,9 +50,31 @@ namespace PersonelTakipOto
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            FrmMain frm = new FrmMain();
-            this.Hide();
-            frm.ShowDialog();
+            if (txtUserNo.Text.Trim() == "")
+                MessageBox.Show("Kullanıcı No Boş");
+            else if (txtPassword.Text.Trim() == "")
+                MessageBox.Show("Şifre boş");
+            else
+            {
+                List<PERSONEL> list = PersonelBLL.PersonelGetir(Convert.ToInt32(txtUserNo.Text), txtPassword.Text);
+                if (list.Count <= 0)
+                    MessageBox.Show("Kullanıcı adı veya şifre hatalı");
+                else
+                {
+                    PERSONEL per = list.First();
+                    UserStatic.PersonelID = per.ID;
+                    UserStatic.isAdmin = per.isAdmin;
+                    UserStatic.UserNo = per.UserNo;
+                    FrmMain frm = new FrmMain();
+                    this.Hide();
+                    frm.ShowDialog();
+                }
+            }
+            
+            
+            
+            
+          
         }
     }
 }

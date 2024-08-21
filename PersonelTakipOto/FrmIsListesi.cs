@@ -47,6 +47,11 @@ namespace PersonelTakipOto
 
         private void FrmIsListesi_Load(object sender, EventArgs e)
         {
+
+
+            MessageBox.Show(UserStatic.PersonelID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString());
+            
+            
             doldur();
         }
 

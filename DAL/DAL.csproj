@@ -55,6 +55,7 @@
     <Compile Include="DTO\PersonelDetayDTO.cs" />
     <Compile Include="DTO\PersonelDTO.cs" />
     <Compile Include="DTO\PozisyonDTO.cs" />
+    <Compile Include="DTO\UserStatic.cs" />
     <Compile Include="PersonelDataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
