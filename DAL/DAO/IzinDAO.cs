@@ -72,5 +72,42 @@ namespace DAL.DAO
             }
             return liste;
         }
+
+        public static void IzinGunceller(IzinDetayDTO detaydto)
+        {
+            try
+            {
+                IZIN iz = db.IZINs.First(x => x.ID == detaydto.IzinID);
+                iz.Acıklama = detaydto.Aciklama;
+                iz.IzinBaslamaTarihi = detaydto.BaslamaTarihi;
+                iz.IzinBitisTarihi = detaydto.BitisTarihi;
+                iz.Sure = detaydto.Sure;
+                db.SubmitChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex ;
+            }
+        }
+
+        public static void IzinGunceller(int izinID, int onayla)
+        {
+            try
+            {
+                IZIN iz = db.IZINs.First(x => x.ID == izinID);
+               
+                iz.IzinDurumID = onayla;
+                db.SubmitChanges();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

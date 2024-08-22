@@ -374,6 +374,7 @@
             this.btnRed.TabIndex = 1;
             this.btnRed.Text = "Reddet";
             this.btnRed.UseVisualStyleBackColor = true;
+            this.btnRed.Click += new System.EventHandler(this.btnRed_Click);
             // 
             // btnOnayla
             // 
@@ -384,6 +385,7 @@
             this.btnOnayla.TabIndex = 0;
             this.btnOnayla.Text = "Onayla";
             this.btnOnayla.UseVisualStyleBackColor = true;
+            this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
             // 
             // btnKapat
             // 
@@ -440,6 +442,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(1087, 327);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // FrmIzinListesi
             // 

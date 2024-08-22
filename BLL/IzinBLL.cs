@@ -28,5 +28,15 @@ namespace BLL
         {
             IzinDAO.IzinEkle(iz);
         }
+
+        public static void IzinGuncelle(IzinDetayDTO detaydto)
+        {
+            IzinDAO.IzinGunceller(detaydto);
+        }
+
+        public static void IzinGuncelle(int izinID, int onayla)
+        {
+            IzinDAO.IzinGunceller(izinID, onayla);
+        }
     }
 }
