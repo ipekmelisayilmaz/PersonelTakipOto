@@ -110,6 +110,7 @@
             this.btnTemizle.TabIndex = 6;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // btnAra
             // 
@@ -120,6 +121,7 @@
             this.btnAra.TabIndex = 5;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
             // 
             // txtSure
             // 
@@ -148,6 +150,7 @@
             this.cmbIzinDurum.Name = "cmbIzinDurum";
             this.cmbIzinDurum.Size = new System.Drawing.Size(195, 33);
             this.cmbIzinDurum.TabIndex = 3;
+            this.cmbIzinDurum.SelectedIndexChanged += new System.EventHandler(this.cmbIzinDurum_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -281,6 +284,7 @@
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(212, 33);
             this.cmbDepartman.TabIndex = 3;
+            this.cmbDepartman.SelectedIndexChanged += new System.EventHandler(this.cmbDepartman_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -390,6 +394,7 @@
             this.btnKapat.TabIndex = 5;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.UseVisualStyleBackColor = true;
+            this.btnKapat.Click += new System.EventHandler(this.btnKapat_Click);
             // 
             // btnSil
             // 
@@ -425,6 +430,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 298);
@@ -433,6 +439,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1087, 327);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FrmIzinListesi
             // 
@@ -444,6 +451,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmIzinListesi";
             this.Text = "FrmIzinListesi";
+            this.Load += new System.EventHandler(this.FrmIzinListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

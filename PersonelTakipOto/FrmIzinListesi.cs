@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL.DTO;
+using BLL;
+using System.Collections;
 
 namespace PersonelTakipOto
 {
@@ -39,6 +42,9 @@ namespace PersonelTakipOto
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            combofull = false;
+            doldur();
+            temizle();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -47,6 +53,130 @@ namespace PersonelTakipOto
             this.Hide();
             frm.ShowDialog();
             this.Visible = true;
+            combofull = false;
+            doldur();
+            temizle();
+
+        }
+
+        private void btnKapat_Click(object sender, EventArgs e)
+        {
+
+        }
+        IzinDTO dto = new IzinDTO();
+        private bool combofull;
+        void doldur()
+        {
+            dto = IzinBLL.GetAll();
+            dataGridView1.DataSource = dto.Izinler;
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "User No";
+            dataGridView1.Columns[2].HeaderText = "Ad";
+            dataGridView1.Columns[3].HeaderText = "Soyad";
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+           
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[7].Visible = false;
+            dataGridView1.Columns[8].HeaderText = "Baslama Tarihi";
+            dataGridView1.Columns[9].HeaderText = "Bitis Tarihi";
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
+            dataGridView1.Columns[12].Visible = false;
+            dataGridView1.Columns[13].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
+            cmbDepartman.DataSource = dto.Departmanlar;
+            cmbDepartman.DisplayMember = "DepartmanAd";
+            cmbDepartman.ValueMember = "ID";
+            cmbDepartman.SelectedIndex = -1;
+            if (dto.Departmanlar.Count > 0)
+                combofull = true;
+            cmbPozisyon.DataSource = dto.Pozisyonlar;
+            cmbPozisyon.DisplayMember = "PozisyonAd";
+            cmbPozisyon.ValueMember = "ID";
+            cmbPozisyon.SelectedIndex = -1;
+            cmbIzinDurum.DataSource = dto.IzinDurumlar;
+            cmbIzinDurum.DisplayMember = "IzinDurumAd";
+            cmbIzinDurum.ValueMember = "ID";
+            cmbIzinDurum.SelectedIndex = -1;
+
+
+
+        }
+
+        private void FrmIzinListesi_Load(object sender, EventArgs e)
+        {
+            doldur();
+        }
+
+        private void cmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combofull)
+            {
+                int departmanID = Convert.ToInt32(cmbDepartman.SelectedValue);
+                cmbPozisyon.DataSource = dto.Pozisyonlar.Where(x => x.DepartmanID == departmanID).ToList();
+            }
+        }
+        List<IzinDetayDTO> listt = new List<IzinDetayDTO>();
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            
+            listt = dto.Izinler;
+            if (txtUserNo.Text.Trim() != "")
+                listt = listt.Where(x => x.UserNo == Convert.ToInt32(txtUserNo.Text)).ToList();
+            if (txtAd.Text.Trim() != "")
+                listt = listt.Where(x => x.Ad.Contains(txtAd.Text)).ToList();
+            if (txtSoyad.Text.Trim() != "")
+                listt = listt.Where(x => x.Soyad.Contains(txtSoyad.Text)).ToList();
+            if (cmbDepartman.SelectedIndex != -1)
+                listt = listt.Where(x => x.DepartmanID == Convert.ToInt32(cmbDepartman.SelectedValue)).ToList();
+            if (cmbPozisyon.SelectedIndex != -1)
+                listt = listt.Where(x => x.PozisyonID == Convert.ToInt32(cmbPozisyon.SelectedValue)).ToList();
+            if (rbBaslamaTarihi.Checked)
+                listt = listt.Where(x => x.BaslamaTarihi >= Convert.ToDateTime(dpBaslama.Value) 
+                && x.BaslamaTarihi < Convert.ToDateTime(dpBitis.Value)).ToList();
+            if (rbTeslimTarihi.Checked)
+                listt = listt.Where(x => x.BitisTarihi >= Convert.ToDateTime(dpBaslama.Value)
+                && x.BitisTarihi < Convert.ToDateTime(dpBitis.Value)).ToList();
+            if (cmbIzinDurum.SelectedIndex != -1)
+                listt = listt.Where(x => x.IzinDurumID == Convert.ToInt32(cmbIzinDurum.SelectedValue)).ToList();
+            if (txtSure.Text.Trim() != "")
+                listt = listt.Where(x => x.Sure==Convert.ToInt32(txtSure.Text)).ToList();
+            dataGridView1.DataSource = listt;
+
+        }
+
+        private void cmbIzinDurum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        void temizle()
+        {
+            txtAd.Clear();
+            txtSoyad.Clear();
+            txtUserNo.Clear();
+            cmbDepartman.SelectedIndex = -1;
+            cmbPozisyon.DataSource = dto.Pozisyonlar;
+            cmbPozisyon.SelectedIndex = -1;
+            dataGridView1.DataSource = dto.Izinler;
+            rbBaslamaTarihi.Checked = false;
+            rbTeslimTarihi.Checked = false;
+            txtSure.Clear();
+            cmbIzinDurum.SelectedIndex = -1;
+            dpBaslama.Value = DateTime.Today;
+            dpBitis.Value = DateTime.Today;
+
+
+        }
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            temizle();
+
+                
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

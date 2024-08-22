@@ -36,7 +36,7 @@
             this.dbBitis = new System.Windows.Forms.DateTimePicker();
             this.txtSure = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnKapat = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
@@ -87,6 +87,7 @@
             this.dbBaslama.Name = "dbBaslama";
             this.dbBaslama.Size = new System.Drawing.Size(172, 22);
             this.dbBaslama.TabIndex = 0;
+            this.dbBaslama.ValueChanged += new System.EventHandler(this.dbBaslama_ValueChanged);
             // 
             // dbBitis
             // 
@@ -94,6 +95,7 @@
             this.dbBitis.Name = "dbBitis";
             this.dbBitis.Size = new System.Drawing.Size(172, 22);
             this.dbBitis.TabIndex = 1;
+            this.dbBitis.ValueChanged += new System.EventHandler(this.dbBitis_ValueChanged);
             // 
             // txtSure
             // 
@@ -114,14 +116,14 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "İzin Süresi";
             // 
-            // textBox1
+            // txtAciklama
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(322, 284);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(389, 172);
-            this.textBox1.TabIndex = 2;
+            this.txtAciklama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtAciklama.Location = new System.Drawing.Point(322, 284);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(389, 172);
+            this.txtAciklama.TabIndex = 2;
             // 
             // label7
             // 
@@ -153,6 +155,7 @@
             this.btnKaydet.TabIndex = 3;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // FrmIzinBilgileri
             // 
@@ -161,7 +164,7 @@
             this.ClientSize = new System.Drawing.Size(743, 640);
             this.Controls.Add(this.btnKapat);
             this.Controls.Add(this.btnKaydet);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSure);
             this.Controls.Add(this.label4);
@@ -174,6 +177,7 @@
             this.Name = "FrmIzinBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İzin Bilgileri";
+            this.Load += new System.EventHandler(this.FrmIzinBilgileri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,7 +193,7 @@
         private System.Windows.Forms.DateTimePicker dbBitis;
         private System.Windows.Forms.TextBox txtSure;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAciklama;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnKapat;
         private System.Windows.Forms.Button btnKaydet;
