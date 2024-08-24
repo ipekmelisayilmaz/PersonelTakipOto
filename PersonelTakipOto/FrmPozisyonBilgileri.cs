@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DAL;
+using DAL.DTO;
 
 namespace PersonelTakipOto
 {
@@ -32,14 +33,35 @@ namespace PersonelTakipOto
                 MessageBox.Show("Departman seçiniz");
             else
             {
-                POZISYON pz = new POZISYON();
-                pz.PozisyonAd = TxtPozisyonAd.Text;
-                pz.DepartmanID = Convert.ToInt32(cmbDepartman.SelectedValue);
-                PozisyonBLL.PozisyonEkle(pz);
-                MessageBox.Show("Pozisyon eklendi");
-                TxtPozisyonAd.Clear();
-                cmbDepartman.SelectedIndex = -1;
+                if (isUpdate)
+                {
 
+                    DialogResult result = MessageBox.Show("Emin misiniz?", "Dikkat", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        detay.PozisyonAD = TxtPozisyonAd.Text;
+                        detay.DepartmanID = Convert.ToInt32(cmbDepartman.SelectedValue);
+                        bool control = false;
+                        if (detay.EskiDepartmanID != detay.DepartmanID)
+                            control = true;
+                        PozisyonBLL.PozisyonGuncelle(detay, control);
+                        MessageBox.Show("Güncellendi");
+                        this.Close();
+
+
+                    }
+                }
+
+                else
+                {
+                    POZISYON pz = new POZISYON();
+                    pz.PozisyonAd = TxtPozisyonAd.Text;
+                    pz.DepartmanID = Convert.ToInt32(cmbDepartman.SelectedValue);
+                    PozisyonBLL.PozisyonEkle(pz);
+                    MessageBox.Show("Pozisyon eklendi");
+                    TxtPozisyonAd.Clear();
+                    cmbDepartman.SelectedIndex = -1;
+                }
 
 
             }
@@ -48,6 +70,8 @@ namespace PersonelTakipOto
 
         }
         List<DEPARTMAN> departmanlar = new List<DEPARTMAN>();
+        public bool isUpdate = false;
+        public PozisyonDetayDTO detay = new PozisyonDetayDTO();
         private void FrmPozisyonBilgileri_Load(object sender, EventArgs e)
         {
             departmanlar=DAL.DAO.DepartmanDAO.DepartmanGetir();
@@ -55,6 +79,12 @@ namespace PersonelTakipOto
             cmbDepartman.DisplayMember = "DepartmanAd";
             cmbDepartman.ValueMember = "ID";
             cmbDepartman.SelectedIndex = -1;
+            if(isUpdate)
+            {
+
+                TxtPozisyonAd.Text = detay.PozisyonAD;
+                cmbDepartman.SelectedValue = detay.DepartmanID;
+            }
         }
     }
 }

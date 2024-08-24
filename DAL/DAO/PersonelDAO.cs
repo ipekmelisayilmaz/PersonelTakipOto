@@ -121,6 +121,17 @@ namespace DAL.DAO
 
         }
 
+        public static void PersonelGuncelle(PozisyonDetayDTO detay)
+        {
+            List<PERSONEL> list = db.PERSONELs.Where(x => x.PozisyonID == detay.ID).ToList();
+            foreach(var item in list)
+            {
+
+                item.DepartmanID = detay.DepartmanID;
+            }
+            db.SubmitChanges();
+        }
+
         public static void PersonelMaasGuncelle(MaasDetayDTO maas)
         {
             try

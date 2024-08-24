@@ -62,7 +62,7 @@ namespace PersonelTakipOto
             txtYil.Text = DateTime.Today.Year.ToString();
             if (isUpdate)
             {
-               maas.PersonelID = detay.PersonelID;
+               //maas.PersonelID = detay.PersonelID;
                 txtAd.Text = detay.Ad;
                 txtSoyad.Text = detay.Soyad;
                 txtMaas.Text = detay.MaasMiktar.ToString();
