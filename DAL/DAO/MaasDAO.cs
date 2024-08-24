@@ -73,5 +73,24 @@ namespace DAL.DAO
             }
             return liste;
         }
+
+        public static void MaasGuncelle(MaasDetayDTO maas)
+        {
+            try
+            {
+
+
+                MAA m = db.MAAs.First(x => x.ID == maas.MaasID);
+                m.Ay_ID = maas.MaasAyID;
+                m.Miktar = maas.MaasMiktar;
+                m.YIL = maas.MaasYil;
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -52,7 +52,8 @@ namespace DAL.DAO
                             departmanID = p.DepartmanID,
                             pozisyonID = p.PozisyonID,
                             isdurumu = durum.IsDurumAd,
-                            isdurumID = i.IsDurumID
+                            isdurumID = i.IsDurumID,
+                            personelID = i.PersonelID
 
                         }).OrderBy(x => x.basamatarihi).ToList();
             foreach (var item in list)
@@ -72,9 +73,31 @@ namespace DAL.DAO
                 dto.PozisyonID = item.pozisyonID;
                 dto.IsDurumAd = item.isdurumu;
                 dto.IsDurumID = item.isdurumID;
+                dto.PersonelID = item.personelID;
                 liste.Add(dto);
             }
             return liste;
+        }
+
+        public static void IsGuncell(IsDetayDTO dto)
+        {
+            try
+            {
+                I iss = db.Is.First(x => x.ID == dto.IsID);
+                iss.Baslik = dto.Baslik;
+                iss.Icerik = dto.Icerik;
+                iss.PersonelID = dto.PersonelID;
+                iss.IsDurumID = dto.IsDurumID;
+                db.SubmitChanges();
+                
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

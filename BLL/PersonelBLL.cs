@@ -38,5 +38,10 @@ namespace BLL
         {
             return PersonelDAO.PersonelGetir(v, text);
         }
+
+        public static void PersonelGuncelle(PersonelDetayDTO pr)
+        {
+            PersonelDAO.PersonelGuncelle(pr);
+        }
     }
 }

@@ -36,20 +36,38 @@ namespace PersonelTakipOto
         {
             FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
             this.Hide();
+            frm.isUpdate = true;
             frm.ShowDialog();
             this.Visible = true;
+            combofull = false;
+            Temizle();
+            doldur();
+          
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
             this.Hide();
+            frm.isUpdate = true;
+            frm.detay = detay;
             frm.ShowDialog();
             this.Visible = true;
+            combofull = false;
+            Temizle();
+            doldur();
+
+
         }
         PersonelDTO dto = new PersonelDTO();
+        PersonelDetayDTO detay = new PersonelDetayDTO();
         bool combofull = false;
         private void FrmPersonelListesi_Load(object sender, EventArgs e)
+        {
+            doldur();
+        }
+
+        private void doldur()
         {
             dto = PersonelBLL.GetAll();
             dataGridView1.DataSource = dto.Personeller;
@@ -111,6 +129,11 @@ namespace PersonelTakipOto
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
+            Temizle();
+        }
+
+        private void Temizle()
+        {
             txtAd.Clear();
             txtSoyad.Clear();
             txtUserNo.Clear();
@@ -123,6 +146,23 @@ namespace PersonelTakipOto
         private void btnKapat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detay.Ad = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detay.Soyad = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detay.DepartmanID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
+            detay.PozisyonID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
+            detay.Maas = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detay.password= dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            detay.isAdmin = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            detay.Resim = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            detay.Adres= dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            detay.DogumTarihi = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
+
         }
     }
 }

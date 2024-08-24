@@ -88,5 +88,55 @@ namespace DAL.DAO
         {
             return db.PERSONELs.Where(x => x.UserNo == v && x.Password == text).ToList();
         }
+
+        public static void PersonelGuncelle(PersonelDetayDTO pr)
+        {
+            try
+            {
+                PERSONEL per = db.PERSONELs.First(x => x.ID == pr.PersonelID);
+
+                per.UserNo = pr.UserNo;
+                per.Ad = pr.Ad;
+                per.Adres = pr.Adres;
+                per.DepartmanID = pr.DepartmanID;
+                per.DogumGunu = pr.DogumTarihi;
+                per.isAdmin = pr.isAdmin;
+                per.Maas = pr.Maas;
+                per.Password = pr.password;
+                per.PozisyonID = pr.PozisyonID;
+                per.Resim = pr.Resim;
+                per.Soyad = pr.Soyad;
+                db.SubmitChanges();
+                    
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+
+
+        }
+
+        public static void PersonelMaasGuncelle(MaasDetayDTO maas)
+        {
+            try
+            {
+                PERSONEL pr = db.PERSONELs.First(x => x.ID == maas.PersonelID);
+                pr.Maas = maas.MaasMiktar;
+                db.SubmitChanges();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

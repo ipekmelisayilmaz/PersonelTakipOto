@@ -32,6 +32,8 @@ namespace PersonelTakipOto
 
         IsDTO dto = new IsDTO();
         bool combofull = false;
+        public bool isUpdate = false;
+        public IsDetayDTO detay = new IsDetayDTO();
         private void FrmIsBilgileri_Load(object sender, EventArgs e)
         {
             cmbIsDurum.Visible = false;
@@ -64,6 +66,27 @@ namespace PersonelTakipOto
             cmbPozisyon.DisplayMember = "PozisyonAd";
             cmbPozisyon.ValueMember = "ID";
             cmbPozisyon.SelectedIndex = -1;
+
+
+            if (isUpdate)
+            {
+                cmbIsDurum.Visible = false;
+                label9.Visible = false;
+
+                txtAd.Text = detay.Ad;
+                txtSoyad.Text = detay.Soyad;
+                txtUserNo.Text= detay.UserNo.ToString();
+                txtIcerik.Text = detay.Icerik;
+
+                txtBaslik.Text = detay.Baslik;
+                cmbIsDurum.DataSource = dto.Durumlar;
+                cmbIsDurum.DisplayMember = "IsDurumAd";
+                cmbIsDurum.ValueMember = "ID";
+                cmbIsDurum.SelectedValue = detay.IsDurumID;
+
+
+            }
+
         }
 
         private void cmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,16 +120,47 @@ namespace PersonelTakipOto
                 MessageBox.Show("İçerik boş");
             else
             {
-                iss.Baslik = txtBaslik.Text;
-                iss.Icerik = txtIcerik.Text;
-                iss.IsDurumID = 1;
-                iss.IsBaslamaTarih = DateTime.Today;
-                IsBLL.IsEkle(iss);
-                MessageBox.Show("İş Eklendi");
-                txtBaslik.Clear();
-                txtIcerik.Clear();
+                if (isUpdate)
+                {
+                    DialogResult result = MessageBox.Show("Emin misiniz?", "Dikkat", MessageBoxButtons.YesNo);
+                    if(result == DialogResult.Yes)
+                    {
+                        IsDetayDTO dtoo = new IsDetayDTO();
+                        if (Convert.ToInt32(txtUserNo.Text) != detay.UserNo)
+                            dtoo.PersonelID = iss.PersonelID;
+                        else
+                            dtoo.PersonelID = detay.PersonelID;
+                        dtoo.Baslik = txtBaslik.Text;
+                        dtoo.Icerik = txtIcerik.Text;
+                        dtoo.IsDurumID = Convert.ToInt32(cmbIsDurum.SelectedValue);
+                        dtoo.IsID = detay.IsID;
+                        IsBLL.IsGuncelle(dtoo);
+                        MessageBox.Show("Güncellendi");
+                        this.Close();
 
 
+
+
+
+                    }
+
+
+
+                }
+
+                else
+                {
+
+                    iss.Baslik = txtBaslik.Text;
+                    iss.Icerik = txtIcerik.Text;
+                    iss.IsDurumID = 1;
+                    iss.IsBaslamaTarih = DateTime.Today;
+                    IsBLL.IsEkle(iss);
+                    MessageBox.Show("İş Eklendi");
+                    txtBaslik.Clear();
+                    txtIcerik.Clear();
+
+                }
             }
 
 

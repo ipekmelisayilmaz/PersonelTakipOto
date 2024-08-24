@@ -44,6 +44,7 @@ namespace PersonelTakipOto
         }
         IsDTO dto = new IsDTO();
         private bool combofull;
+        IsDetayDTO detay = new IsDetayDTO();
 
         private void FrmIsListesi_Load(object sender, EventArgs e)
         {
@@ -95,6 +96,7 @@ namespace PersonelTakipOto
         {
             FrmIsBilgileri frm = new FrmIsBilgileri();
             this.Hide();
+            frm.isUpdate = false;
             frm.ShowDialog();
             this.Visible = true;
             combofull = false;
@@ -106,6 +108,8 @@ namespace PersonelTakipOto
         {
             FrmIsBilgileri frm = new FrmIsBilgileri();
             this.Hide();
+            frm.isUpdate = true;
+            frm.detay = detay;
             frm.ShowDialog();
             this.Visible = true;
             combofull = false;
@@ -161,6 +165,20 @@ namespace PersonelTakipOto
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detay.IsID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[14].Value);
+            detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detay.IsDurumID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            detay.Baslik = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            detay.Icerik = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+            detay.Ad= dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detay.Soyad= dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detay.IsBitisTarihi = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            detay.IsBaslamaTarihi = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
         }
     }
 }

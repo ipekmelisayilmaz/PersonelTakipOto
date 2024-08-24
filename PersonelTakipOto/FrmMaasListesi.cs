@@ -34,6 +34,8 @@ namespace PersonelTakipOto
         {
             FrmMaasBilgileri frm = new FrmMaasBilgileri();
             this.Hide();
+            frm.isUpdate = false;
+       
             frm.ShowDialog();
             this.Visible = true;
             combofull = false;
@@ -45,6 +47,8 @@ namespace PersonelTakipOto
         {
             FrmMaasBilgileri frm = new FrmMaasBilgileri();
             this.Hide();
+            frm.isUpdate = true;
+            frm.detay = detay;
             frm.ShowDialog();
             this.Visible = true;
             combofull = false;
@@ -58,6 +62,7 @@ namespace PersonelTakipOto
         }
         MaasDTO dto = new MaasDTO();
         private bool combofull;
+        MaasDetayDTO detay = new MaasDetayDTO();
 
         private void FrmMaasListesi_Load(object sender, EventArgs e)
         {
@@ -159,6 +164,23 @@ namespace PersonelTakipOto
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detay.MaasID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detay.MaasAyID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            detay.MaasYil = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detay.MaasMiktar = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detay.Ad = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detay.Soyad = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        private void txtUserNo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
