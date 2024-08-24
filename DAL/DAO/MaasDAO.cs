@@ -92,5 +92,22 @@ namespace DAL.DAO
                 throw ex;
             }
         }
+
+        public static void maasSil(int maasID)
+        {
+            try
+            {
+                MAA maas = db.MAAs.First(x => x.ID == maasID);
+                db.MAAs.DeleteOnSubmit(maas);
+                db.SubmitChanges();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

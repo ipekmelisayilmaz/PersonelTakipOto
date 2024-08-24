@@ -38,5 +38,10 @@ namespace BLL
         {
             IzinDAO.IzinGunceller(izinID, onayla);
         }
+
+        public static void IzinSil(int izinID)
+        {
+            IzinDAO.IzinSil(izinID);
+        }
     }
 }

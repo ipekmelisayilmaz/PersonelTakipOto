@@ -109,5 +109,24 @@ namespace DAL.DAO
                 throw ex;
             }
         }
+
+        public static void IzinSil(int izinID)
+        {
+            try
+            {
+
+
+
+                IZIN iz = db.IZINs.First(x => x.ID == izinID);
+                db.IZINs.DeleteOnSubmit(iz);
+                db.SubmitChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

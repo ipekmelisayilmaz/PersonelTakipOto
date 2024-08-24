@@ -99,5 +99,23 @@ namespace DAL.DAO
                 throw ex;
             }
         }
+
+        public static void IsSil(int isID)
+        {
+            try
+            {
+
+
+                I iss = db.Is.First(x => x.ID == isID);
+                db.Is.DeleteOnSubmit(iss);
+                db.SubmitChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

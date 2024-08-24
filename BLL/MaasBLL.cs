@@ -41,5 +41,10 @@ namespace BLL
             if (control)
                 PersonelDAO.PersonelMaasGuncelle(maas);
         }
+
+        public static void maasSil(int maasID)
+        {
+            MaasDAO.maasSil(maasID);
+        }
     }
 }

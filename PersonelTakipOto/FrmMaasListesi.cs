@@ -182,5 +182,20 @@ namespace PersonelTakipOto
         {
 
         }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz ?", "Dikkat", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                MaasBLL.maasSil(detay.MaasID);
+                MessageBox.Show("Silindi");
+                combofull = false;
+                Temizle();
+                doldur();
+
+
+            }
+        }
     }
 }
