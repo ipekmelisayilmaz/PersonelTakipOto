@@ -16,7 +16,7 @@ namespace DAL.DTO
         public string PozisyonAd { get; set; }
         public int DepartmanID { get; set; }
         public int PozisyonID { get; set; }
-        public int PersonelID { get; set; }
+        public int PersoneID { get; set; }
         public string Icerik{ get; set; }
         public string IsDurumAd { get; set; }
         public int IsDurumID { get; set; }

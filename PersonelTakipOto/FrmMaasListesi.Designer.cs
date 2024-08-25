@@ -345,7 +345,7 @@
             // btnKapat
             // 
             this.btnKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKapat.Location = new System.Drawing.Point(727, 29);
+            this.btnKapat.Location = new System.Drawing.Point(765, 29);
             this.btnKapat.Name = "btnKapat";
             this.btnKapat.Size = new System.Drawing.Size(128, 43);
             this.btnKapat.TabIndex = 3;

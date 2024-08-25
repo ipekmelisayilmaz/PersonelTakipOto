@@ -358,19 +358,20 @@
             // btnOnayla
             // 
             this.btnOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOnayla.Location = new System.Drawing.Point(103, 55);
+            this.btnOnayla.Location = new System.Drawing.Point(78, 55);
             this.btnOnayla.Name = "btnOnayla";
             this.btnOnayla.Size = new System.Drawing.Size(136, 43);
             this.btnOnayla.TabIndex = 0;
             this.btnOnayla.Text = "Onayla";
             this.btnOnayla.UseVisualStyleBackColor = true;
+            this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
             // 
             // btnKapat
             // 
             this.btnKapat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKapat.Location = new System.Drawing.Point(812, 55);
+            this.btnKapat.Location = new System.Drawing.Point(721, 55);
             this.btnKapat.Name = "btnKapat";
-            this.btnKapat.Size = new System.Drawing.Size(128, 43);
+            this.btnKapat.Size = new System.Drawing.Size(136, 43);
             this.btnKapat.TabIndex = 4;
             this.btnKapat.Text = "Kapat";
             this.btnKapat.UseVisualStyleBackColor = true;
@@ -379,9 +380,9 @@
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(644, 55);
+            this.btnSil.Location = new System.Drawing.Point(552, 55);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(132, 43);
+            this.btnSil.Size = new System.Drawing.Size(136, 43);
             this.btnSil.TabIndex = 3;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
@@ -390,9 +391,9 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(467, 55);
+            this.btnGuncelle.Location = new System.Drawing.Point(391, 55);
             this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(127, 43);
+            this.btnGuncelle.Size = new System.Drawing.Size(136, 43);
             this.btnGuncelle.TabIndex = 2;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
@@ -401,7 +402,7 @@
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(284, 55);
+            this.btnEkle.Location = new System.Drawing.Point(233, 55);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(136, 43);
             this.btnEkle.TabIndex = 1;

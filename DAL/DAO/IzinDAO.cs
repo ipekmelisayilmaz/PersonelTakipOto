@@ -54,7 +54,7 @@ namespace DAL.DAO
             foreach(var item in list)
                 {
                 IzinDetayDTO dto = new IzinDetayDTO();
-                dto.PozisyonID = item.personelID;
+                dto.PersoneID = item.personelID;
                 dto.BaslamaTarihi = item.baslamatarihi;
                 dto.UserNo = item.UserNo;
                 dto.Ad = item.ad;

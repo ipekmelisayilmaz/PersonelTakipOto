@@ -48,12 +48,26 @@ namespace PersonelTakipOto
 
         private void FrmIsListesi_Load(object sender, EventArgs e)
         {
-
-
-            MessageBox.Show(UserStatic.PersonelID.ToString() + " " + UserStatic.UserNo.ToString() + " " + UserStatic.isAdmin.ToString());
-            
-            
+           
+       
+         
             doldur();
+            if(!UserStatic.isAdmin)
+            {
+                btnEkle.Visible = false;
+                btnGuncelle.Visible = false;
+                btnSil.Visible = false;
+                btnOnayla.Location = new Point(365, 55);
+                btnKapat.Location = new Point(493, 55);
+                pnlForAdmin.Visible = false;
+                dto.Isler = dto.Isler.Where(x => x.PersoneID == UserStatic.PersonelID).ToList();
+                dataGridView1.DataSource = dto.Isler;
+                btnOnayla.Text = "Tamamla";
+
+
+            }
+
+
         }
 
         private void doldur()
@@ -70,7 +84,7 @@ namespace PersonelTakipOto
             dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             dataGridView1.Columns[9].Visible = false;
-            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[10].HeaderText = "Durum";
             dataGridView1.Columns[11].Visible = false;
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
@@ -171,7 +185,7 @@ namespace PersonelTakipOto
         {
             detay.IsID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[14].Value);
             detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
-            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detay.PersoneID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
             detay.IsDurumID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
             detay.Baslik = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             detay.Icerik = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
@@ -194,6 +208,28 @@ namespace PersonelTakipOto
                 doldur();
                 Temizle();
             }
+        }
+
+        private void btnOnayla_Click(object sender, EventArgs e)
+        {
+            if (UserStatic.isAdmin && detay.IsDurumID == OnayStatic.Onaylandı)
+                MessageBox.Show("Bu iş onaylanmış");
+            else if (UserStatic.isAdmin && detay.IsDurumID == OnayStatic.Personelde && detay.PersoneID !=UserStatic.PersonelID)
+                MessageBox.Show("Bu iş henüz tamamlanmamış önce işin tamamlanması gerekir");
+            else if (!UserStatic.isAdmin && detay.IsDurumID == OnayStatic.Tamamlandı)
+                MessageBox.Show("Bu iş zaten tamamlanmış");
+            else
+            {
+                IsBLL.IsGuncelle(detay.IsID);
+                MessageBox.Show("Onaylandı");
+                combofull = false;
+                doldur();
+                Temizle();
+
+
+
+            }
+
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL.DTO;
 using BLL;
+using System.IO;
 
 namespace PersonelTakipOto
 {
@@ -36,7 +37,7 @@ namespace PersonelTakipOto
         {
             FrmPersonelBilgileri frm = new FrmPersonelBilgileri();
             this.Hide();
-            frm.isUpdate = true;
+            frm.isUpdate = false;
             frm.ShowDialog();
             this.Visible = true;
             combofull = false;
@@ -150,7 +151,7 @@ namespace PersonelTakipOto
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detay.PersoneID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             detay.Ad = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             detay.Soyad = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             detay.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
@@ -163,6 +164,29 @@ namespace PersonelTakipOto
             detay.Adres= dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
             detay.DogumTarihi = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
 
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Dikkat", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+
+                PersonelBLL.PersonelSil(detay.PersoneID);
+                string resimyol = Application.StartupPath+"\\resimler\\" + detay.Resim 
+                    ;
+
+                File.Delete(resimyol);
+                MessageBox.Show("Silindi");
+                combofull = false;
+                Temizle();
+                doldur();
+
+
+
+
+
+            }
         }
     }
 }

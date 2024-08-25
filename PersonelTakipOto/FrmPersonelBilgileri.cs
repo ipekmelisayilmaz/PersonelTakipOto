@@ -70,9 +70,26 @@ namespace PersonelTakipOto
                 chisAdmin.Checked = detay.isAdmin;
                 cmbDepartman.SelectedValue = detay.DepartmanID;
                 cmbPozisyon.SelectedValue = detay.PozisyonID;
-                resim2 = Application.StartupPath + "\\resimler\\" + detay.Resim;
+                resim2 = Application.StartupPath+"\\resimler\\" + detay.Resim;
+                
+
+
                 txtResim.Text = resim2;
                 pictureBox1.Load(resim2);
+
+
+                if (!UserStatic.isAdmin)
+                {
+                    txtAd.Enabled = false;
+                    txtSoyad.Enabled = false;
+                    txtMaas.Enabled = false;
+                    txtUserNo.Enabled = false;
+                    chisAdmin.Enabled = false;
+                    cmbDepartman.Enabled = false;
+                    cmbPozisyon.Enabled = false;
+
+
+                }
 
             }
 
@@ -132,7 +149,7 @@ namespace PersonelTakipOto
                     {
 
                         PersonelDetayDTO pr = new PersonelDetayDTO();
-                        pr.PersonelID = detay.PersonelID;
+                        pr.PersoneID = detay.PersoneID;
                         pr.UserNo = Convert.ToInt32(txtUserNo.Text);
                         pr.Ad = txtAd.Text;
                         pr.Soyad = txtSoyad.Text;

@@ -28,7 +28,7 @@ namespace BLL
             if (control)
             {
                 MaasDetayDTO dto = new MaasDetayDTO();
-                dto.PersonelID = maas.PersonelID;
+                dto.PersoneID = maas.PersonelID;
                 dto.MaasMiktar = maas.Miktar;
 
                 PersonelDAO.PersonelMaasGuncelle(dto);

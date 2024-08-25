@@ -53,7 +53,7 @@ namespace DAL.DAO
                             pozisyonID = p.PozisyonID,
                             isdurumu = durum.IsDurumAd,
                             isdurumID = i.IsDurumID,
-                            personelID = i.PersonelID
+                            persoenlID = i.PersonelID
 
                         }).OrderBy(x => x.basamatarihi).ToList();
             foreach (var item in list)
@@ -73,7 +73,7 @@ namespace DAL.DAO
                 dto.PozisyonID = item.pozisyonID;
                 dto.IsDurumAd = item.isdurumu;
                 dto.IsDurumID = item.isdurumID;
-                dto.PersonelID = item.personelID;
+                dto.PersoneID = item.persoenlID;
                 liste.Add(dto);
             }
             return liste;
@@ -86,7 +86,7 @@ namespace DAL.DAO
                 I iss = db.Is.First(x => x.ID == dto.IsID);
                 iss.Baslik = dto.Baslik;
                 iss.Icerik = dto.Icerik;
-                iss.PersonelID = dto.PersonelID;
+                iss.PersonelID = dto.PersoneID;
                 iss.IsDurumID = dto.IsDurumID;
                 db.SubmitChanges();
                 
@@ -98,6 +98,16 @@ namespace DAL.DAO
 
                 throw ex;
             }
+        }
+
+        public static void IsGuncelle(int isID)
+        {
+            I iss = db.Is.First(x => x.ID == isID);
+            if (UserStatic.isAdmin)
+                iss.IsDurumID = OnayStatic.Onaylandı;
+            else
+                iss.IsDurumID = OnayStatic.Tamamlandı;
+            db.SubmitChanges();
         }
 
         public static void IsSil(int isID)

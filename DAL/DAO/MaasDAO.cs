@@ -65,7 +65,7 @@ namespace DAL.DAO
                 dto.MaasYil = item.maasyil;
                 dto.MaasAy = item.maasay;
                 dto.MaasID = item.maasID;
-                dto.PersonelID = item.personelID;
+                dto.PersoneID = item.personelID;
                 dto.DepartmanID = item.departmanID;
                 dto.PozisyonID = item.pozisyonID;
                 dto.MaasAyID = item.maasAyID;

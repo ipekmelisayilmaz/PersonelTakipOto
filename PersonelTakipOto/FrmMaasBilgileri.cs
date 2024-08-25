@@ -62,7 +62,7 @@ namespace PersonelTakipOto
             txtYil.Text = DateTime.Today.Year.ToString();
             if (isUpdate)
             {
-               //maas.PersonelID = detay.PersonelID;
+                // maas.PersonelID = detay.PersonelID;
                 txtAd.Text = detay.Ad;
                 txtSoyad.Text = detay.Soyad;
                 txtMaas.Text = detay.MaasMiktar.ToString();
@@ -105,7 +105,7 @@ namespace PersonelTakipOto
 
             }
         }
-
+       
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             if (maas.PersonelID == 0)
@@ -129,7 +129,7 @@ namespace PersonelTakipOto
                         maas.MaasAyID = Convert.ToInt32(cmbAylar.SelectedValue);
                         maas.MaasYil = Convert.ToInt32(txtYil.Text);
                         maas.EskiMaas = detay.MaasMiktar;
-                        maas.PersonelID = detay.PersonelID;
+                        maas.PersoneID = detay.PersoneID;
                         maas.MaasMiktar = Convert.ToInt32(txtMaas.Text);
 
                         if (maas.MaasMiktar > maas.EskiMaas)
@@ -145,7 +145,7 @@ namespace PersonelTakipOto
                     if (Convert.ToInt32(txtMaas.Text) > maasmiktar)
                         control = true;
 
-                   
+
                     maas.Ay_ID = Convert.ToInt32(cmbAylar.SelectedValue);
                     maas.Miktar = Convert.ToInt32(txtMaas.Text);
                     maas.YIL = Convert.ToInt32(txtYil.Text);

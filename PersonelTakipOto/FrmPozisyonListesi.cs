@@ -67,5 +67,24 @@ namespace PersonelTakipOto
             detay.EskiDepartmanID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[3].Value);
             detay.PozisyonAD = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek istediğinizden emin misiniz?", "Dikkat", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                PozisyonBLL.PozisyonSil(detay.ID);
+                MessageBox.Show("Silindi");
+                liste = PozisyonBLL.PozisyonGetir();
+                dataGridView1.DataSource = liste;
+
+
+            }
+        }
     }
 }

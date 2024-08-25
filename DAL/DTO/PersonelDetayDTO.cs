@@ -8,7 +8,7 @@ namespace DAL.DTO
 {
     public class PersonelDetayDTO
     {
-        public int PersonelID { get; set; }
+        public int PersoneID { get; set; }
         public int UserNo { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }

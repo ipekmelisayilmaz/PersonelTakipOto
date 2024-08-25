@@ -53,14 +53,14 @@ namespace DAL.DAO
                             adres = p.Adres,
                             UserNo = p.UserNo
 
-                        }).OrderBy(x => x.personelID).ToList();
+                        }).OrderBy(x => x.UserNo).ToList();
 
             foreach ( var item in list)
 
             {
 
                 PersonelDetayDTO dto = new PersonelDetayDTO();
-                dto.PersonelID = item.personelID;
+                dto.PersoneID = item.personelID;
                 dto.Ad = item.ad;
                 dto.Soyad = item.soyad;
                 dto.password = item.password;
@@ -93,7 +93,7 @@ namespace DAL.DAO
         {
             try
             {
-                PERSONEL per = db.PERSONELs.First(x => x.ID == pr.PersonelID);
+                PERSONEL per = db.PERSONELs.First(x => x.ID == pr.PersoneID);
 
                 per.UserNo = pr.UserNo;
                 per.Ad = pr.Ad;
@@ -136,8 +136,35 @@ namespace DAL.DAO
         {
             try
             {
-                PERSONEL pr = db.PERSONELs.First(x => x.ID == maas.PersonelID);
+                PERSONEL pr = db.PERSONELs.First(x => x.ID == maas.PersoneID);
                 pr.Maas = maas.MaasMiktar;
+                db.SubmitChanges();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void PersonelSil(int personeID)
+        {
+            try
+            {
+                /*List<IZIN> iz = db.IZINs.Where(x => x.PersonelID == personeID).ToList();    Bu işlemi Trigger yapıyor
+                db.IZINs.DeleteAllOnSubmit(iz);
+                db.SubmitChanges();
+                List<I> iss = db.Is.Where(x => x.PersonelID == personeID).ToList();
+                db.Is.DeleteAllOnSubmit(iss);
+                db.SubmitChanges();
+                List<MAA> maas = db.MAAs.Where(x => x.PersonelID == personeID).ToList();
+                db.MAAs.DeleteAllOnSubmit(maas);
+                db.SubmitChanges();*/
+                PERSONEL pr = db.PERSONELs.First(x => x.ID == personeID);
+                db.PERSONELs.DeleteOnSubmit(pr);
                 db.SubmitChanges();
 
 

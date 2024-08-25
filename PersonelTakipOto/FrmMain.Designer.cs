@@ -43,9 +43,9 @@
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnExit.Image = global::PersonelTakipOto.Properties.Resources.exit1;
-            this.btnExit.Location = new System.Drawing.Point(395, 392);
+            this.btnExit.Location = new System.Drawing.Point(321, 342);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(188, 147);
+            this.btnExit.Size = new System.Drawing.Size(145, 151);
             this.btnExit.TabIndex = 7;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = false;
@@ -57,9 +57,9 @@
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnLogOut.Image = global::PersonelTakipOto.Properties.Resources.logout1;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLogOut.Location = new System.Drawing.Point(91, 392);
+            this.btnLogOut.Location = new System.Drawing.Point(103, 342);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(188, 147);
+            this.btnLogOut.Size = new System.Drawing.Size(145, 151);
             this.btnLogOut.TabIndex = 6;
             this.btnLogOut.Text = "Oturumu Kapat";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -72,9 +72,9 @@
             this.btnPozisyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPozisyon.Image = global::PersonelTakipOto.Properties.Resources.medal1;
             this.btnPozisyon.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPozisyon.Location = new System.Drawing.Point(490, 205);
+            this.btnPozisyon.Location = new System.Drawing.Point(414, 175);
             this.btnPozisyon.Name = "btnPozisyon";
-            this.btnPozisyon.Size = new System.Drawing.Size(188, 147);
+            this.btnPozisyon.Size = new System.Drawing.Size(140, 161);
             this.btnPozisyon.TabIndex = 5;
             this.btnPozisyon.Text = "Pozisyon İşlemleri";
             this.btnPozisyon.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -87,9 +87,9 @@
             this.btnDepartman.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDepartman.Image = global::PersonelTakipOto.Properties.Resources.department;
             this.btnDepartman.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDepartman.Location = new System.Drawing.Point(241, 205);
+            this.btnDepartman.Location = new System.Drawing.Point(210, 175);
             this.btnDepartman.Name = "btnDepartman";
-            this.btnDepartman.Size = new System.Drawing.Size(188, 147);
+            this.btnDepartman.Size = new System.Drawing.Size(148, 161);
             this.btnDepartman.TabIndex = 4;
             this.btnDepartman.Text = "Departman İşlemleri";
             this.btnDepartman.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -102,9 +102,9 @@
             this.btnIzin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIzin.Image = global::PersonelTakipOto.Properties.Resources.traveler1;
             this.btnIzin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnIzin.Location = new System.Drawing.Point(12, 205);
+            this.btnIzin.Location = new System.Drawing.Point(12, 175);
             this.btnIzin.Name = "btnIzin";
-            this.btnIzin.Size = new System.Drawing.Size(188, 147);
+            this.btnIzin.Size = new System.Drawing.Size(140, 161);
             this.btnIzin.TabIndex = 3;
             this.btnIzin.Text = "İzin İşlemleri";
             this.btnIzin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -117,9 +117,9 @@
             this.btnMaas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMaas.Image = global::PersonelTakipOto.Properties.Resources.give_money1;
             this.btnMaas.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMaas.Location = new System.Drawing.Point(490, 12);
+            this.btnMaas.Location = new System.Drawing.Point(414, 12);
             this.btnMaas.Name = "btnMaas";
-            this.btnMaas.Size = new System.Drawing.Size(188, 147);
+            this.btnMaas.Size = new System.Drawing.Size(140, 140);
             this.btnMaas.TabIndex = 2;
             this.btnMaas.Text = "Maaş";
             this.btnMaas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -132,9 +132,9 @@
             this.btnIs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIs.Image = global::PersonelTakipOto.Properties.Resources.workspace1;
             this.btnIs.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnIs.Location = new System.Drawing.Point(241, 12);
+            this.btnIs.Location = new System.Drawing.Point(210, 12);
             this.btnIs.Name = "btnIs";
-            this.btnIs.Size = new System.Drawing.Size(188, 147);
+            this.btnIs.Size = new System.Drawing.Size(148, 140);
             this.btnIs.TabIndex = 1;
             this.btnIs.Text = "İşler";
             this.btnIs.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -149,7 +149,7 @@
             this.btnPersonel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPersonel.Location = new System.Drawing.Point(12, 12);
             this.btnPersonel.Name = "btnPersonel";
-            this.btnPersonel.Size = new System.Drawing.Size(188, 147);
+            this.btnPersonel.Size = new System.Drawing.Size(140, 157);
             this.btnPersonel.TabIndex = 0;
             this.btnPersonel.Text = "Personel İşlemleri";
             this.btnPersonel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 564);
+            this.ClientSize = new System.Drawing.Size(611, 505);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnPozisyon);

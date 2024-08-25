@@ -43,5 +43,10 @@ namespace BLL
         {
             PersonelDAO.PersonelGuncelle(pr);
         }
+
+        public static void PersonelSil(int personeID)
+        {
+            PersonelDAO.PersonelSil(personeID);
+        }
     }
 }

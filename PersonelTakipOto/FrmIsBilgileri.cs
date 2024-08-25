@@ -127,9 +127,9 @@ namespace PersonelTakipOto
                     {
                         IsDetayDTO dtoo = new IsDetayDTO();
                         if (Convert.ToInt32(txtUserNo.Text) != detay.UserNo)
-                            dtoo.PersonelID = iss.PersonelID;
+                            dtoo.PersoneID = iss.PersonelID;
                         else
-                            dtoo.PersonelID = detay.PersonelID;
+                        dtoo.PersoneID = detay.PersoneID;
                         dtoo.Baslik = txtBaslik.Text;
                         dtoo.Icerik = txtIcerik.Text;
                         dtoo.IsDurumID = Convert.ToInt32(cmbIsDurum.SelectedValue);

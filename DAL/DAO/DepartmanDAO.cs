@@ -62,5 +62,22 @@ namespace DAL.DAO
 
 
         }
+
+        public static void departmanSil(int id)
+        {
+            try
+            {
+
+                DEPARTMAN dp = db.DEPARTMANs.First(x => x.ID == id);
+                db.DEPARTMANs.DeleteOnSubmit(dp);
+                db.SubmitChanges();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

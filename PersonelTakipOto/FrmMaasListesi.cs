@@ -67,6 +67,18 @@ namespace PersonelTakipOto
         private void FrmMaasListesi_Load(object sender, EventArgs e)
         {
             doldur();
+            if(!UserStatic.isAdmin)
+            {
+                btnEkle.Visible = false;
+                btnGuncelle.Visible = false;
+                btnSil.Visible = false;
+                dto.Maaslar = dto.Maaslar.Where(x => x.PersoneID == UserStatic.PersonelID).ToList();
+                dataGridView1.DataSource = dto.Maaslar;
+                panel3.Visible = false;
+                btnKapat.Location = new Point(348, 29);
+
+
+            }
 
 
         }
@@ -169,7 +181,7 @@ namespace PersonelTakipOto
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             detay.MaasID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
-            detay.PersonelID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detay.PersoneID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
             detay.MaasAyID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
             detay.MaasYil = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
             detay.MaasMiktar = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[10].Value);

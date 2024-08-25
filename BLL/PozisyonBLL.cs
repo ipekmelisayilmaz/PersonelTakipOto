@@ -27,5 +27,10 @@ namespace BLL
             if (control)
                 PersonelDAO.PersonelGuncelle(detay);
         }
+
+        public static void PozisyonSil(int id)
+        {
+            PozisyonDAO.PozisyonSil(id);
+        }
     }
 }

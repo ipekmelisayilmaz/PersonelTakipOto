@@ -66,5 +66,12 @@ namespace DAL.DAO
 			pz.DepartmanID = detay.DepartmanID;
 			db.SubmitChanges();
         }
+
+        public static void PozisyonSil(int id)
+        {
+			POZISYON pz = db.POZISYONs.First(x => x.ID == id);
+			db.POZISYONs.DeleteOnSubmit(pz);
+			db.SubmitChanges();
+        }
     }
 }

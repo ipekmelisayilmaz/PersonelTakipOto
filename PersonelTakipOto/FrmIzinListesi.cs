@@ -52,6 +52,8 @@ namespace PersonelTakipOto
         {
             if (detay.IzinID == 0)
                 MessageBox.Show("Lütfen izin seçin");
+            else if (detay.IzinDurumID == ComboStatic.Onayla || detay.IzinDurumID == ComboStatic.Reddedildi)
+                MessageBox.Show("Onaylanmış ya da reddedilmiş izinler güncellenemez");
             else
             {
                 FrmIzinBilgileri frm = new FrmIzinBilgileri();
@@ -72,7 +74,7 @@ namespace PersonelTakipOto
 
         private void btnKapat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
         IzinDTO dto = new IzinDTO();
         private bool combofull;
@@ -118,6 +120,14 @@ namespace PersonelTakipOto
         private void FrmIzinListesi_Load(object sender, EventArgs e)
         {
             doldur();
+            if (!UserStatic.isAdmin)
+            {
+                dto.Izinler = dto.Izinler.Where(x => x.PersoneID == UserStatic.PersonelID).ToList();
+                dataGridView1.DataSource = dto.Izinler;
+                panel3.Visible = false;
+                btnOnayla.Visible = false;
+                btnRed.Visible = false;
+            }
         }
 
         private void cmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
@@ -250,6 +260,11 @@ namespace PersonelTakipOto
                 }
 
             }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
