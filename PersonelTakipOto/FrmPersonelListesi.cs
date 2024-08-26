@@ -188,5 +188,10 @@ namespace PersonelTakipOto
 
             }
         }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            //ExcelExport.ExportExcel(dataGridView1);
+        }
     }
 }

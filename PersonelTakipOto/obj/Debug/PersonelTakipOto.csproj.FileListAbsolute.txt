@@ -28,3 +28,4 @@ C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelT
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.CopyComplete
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.exe
 C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.pdb
+C:\Users\DELL\source\repos\PersonelTakipOto\PersonelTakipOto\obj\Debug\PersonelTakipOto.csproj.ResolveComReference.cache

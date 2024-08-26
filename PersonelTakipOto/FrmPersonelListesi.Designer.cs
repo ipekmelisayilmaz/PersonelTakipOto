@@ -47,6 +47,7 @@
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnExcel);
             this.panel1.Controls.Add(this.btnTemizle);
             this.panel1.Controls.Add(this.btnAra);
             this.panel1.Controls.Add(this.cmbPozisyon);
@@ -74,10 +76,10 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTemizle.Location = new System.Drawing.Point(765, 102);
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Location = new System.Drawing.Point(765, 70);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(136, 43);
+            this.btnTemizle.Size = new System.Drawing.Size(136, 45);
             this.btnTemizle.TabIndex = 12;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = true;
@@ -85,10 +87,10 @@
             // 
             // btnAra
             // 
-            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAra.Location = new System.Drawing.Point(765, 11);
             this.btnAra.Name = "btnAra";
-            this.btnAra.Size = new System.Drawing.Size(136, 43);
+            this.btnAra.Size = new System.Drawing.Size(136, 45);
             this.btnAra.TabIndex = 11;
             this.btnAra.Text = "Ara";
             this.btnAra.UseVisualStyleBackColor = true;
@@ -258,6 +260,17 @@
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExcel.Location = new System.Drawing.Point(765, 131);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(136, 47);
+            this.btnExcel.TabIndex = 13;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // FrmPersonelListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,5 +312,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbDepartman;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
