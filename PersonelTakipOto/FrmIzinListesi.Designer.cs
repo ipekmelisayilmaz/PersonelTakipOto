@@ -456,7 +456,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmIzinListesi";
-            this.Text = "FrmIzinListesi";
+            this.Text = "İzin Listesi";
             this.Load += new System.EventHandler(this.FrmIzinListesi_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
