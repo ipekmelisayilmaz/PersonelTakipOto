@@ -2,7 +2,7 @@
 
 **Personel Takip Otomasyon Sistemi**, 
 personel yönetimi süreçlerini kolaylaştırmak için geliştirilmiş bir yazılım çözümüdür.
- Bu proje, **C# dili**, **LINQ to SQL** ve **Katmanlı Mimari** kullanılarak inşa edilmiştir. 
+Bu proje, **![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white) dili**  , **LINQ to SQL** ve **Katmanlı Mimari** kullanılarak inşa edilmiştir. 
 Uygulama, personel ekleme, güncelleme, silme, listeleme izin yönetimi,departman işemleri pozisyon işlemleri ve maaş işlemleri gibi özellikleri içermektedir. 
 Ayrıca, yönetici paneli sayesinde kullanıcılar, yetkilendirilmiş işlemleri gerçekleştirebilir.
 
